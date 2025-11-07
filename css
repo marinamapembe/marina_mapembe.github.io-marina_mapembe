@@ -1,0 +1,132 @@
+/* Définition des couleurs */
+:root {
+    --bg-color: #4B0082; /* Violet foncé (Indigo du web) */
+    --text-color: #E6E6FA; /* Lavande très clair pour le texte (bonne lisibilité) */
+    --accent-color: #DA70D6; /* Orchidée clair pour l'accentuation */
+    --header-footer-color: #3A0061; /* Violet encore plus foncé pour l'entête et pied de page */
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation et En-tête */
+header {
+    background-color: var(--header-footer-color);
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.sio-sisr {
+    color: var(--accent-color); /* Pour mettre en valeur l'option */
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-color);
+    color: #000; /* Texte noir sur l'accentuation */
+    border-radius: 5px;
+}
+
+/* Sections */
+main section {
+    padding: 60px 50px;
+    min-height: 100vh; /* Pour que les sections prennent toute la hauteur */
+    scroll-margin-top: 60px; /* Pour un défilement agréable avec la barre fixe */
+}
+
+h2, h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Section Accueil (Hero) */
+#accueil {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #BA55D3; /* Une nuance légèrement différente */
+}
+
+/* Section Expérience / Projets */
+.projet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projet {
+    background-color: var(--header-footer-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projet h4 {
+    color: var(--text-color);
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: 5px;
+}
+
+/* Pied de page (Footer) */
+footer {
+    background-color: var(--header-footer-color);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
